@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kindergarten WolfGarten</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-image: url('https://cdn.pixabay.com/photo/2016/10/09/14/00/fox-1726491_1280.png');
+      background-repeat: no-repeat;
+      background-size: 120px;
+      background-position: bottom right;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nature: {
+              light: '#f0fdf4',
+              mid: '#a7f3d0',
+              dark: '#065f46'
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1.5s ease-out',
+            slideUp: 'slideUp 1s ease-out',
+            zoomIn: 'zoomIn 0.8s ease-out',
+            bounceSlow: 'bounce 2s infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 },
+            },
+            zoomIn: {
+              '0%': { transform: 'scale(0.8)', opacity: 0 },
+              '100%': { transform: 'scale(1)', opacity: 1 },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-nature-light text-gray-800 font-sans">
+  <header class="bg-nature-dark text-white p-6 shadow animate-fadeIn sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold animate-zoomIn">Kindergarten WolfGarten 🦊</h1>
+      <nav class="space-x-4">
+        <a href="#about" class="hover:underline">Über uns</a>
+        <a href="#angebote" class="hover:underline">Angebote</a>
+        <a href="#team" class="hover:underline">Team</a>
+        <a href="#kontakt" class="hover:underline">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="text-center py-20 bg-gradient-to-r from-green-200 to-green-100 animate-slideUp">
+    <h2 class="text-4xl font-bold mb-4 animate-bounceSlow">Willkommen im Kindergarten WolfGarten! 🐿️</h2>
+    <p class="text-xl max-w-xl mx-auto mb-8 animate-zoomIn">Ein liebevoller Ort zum Spielen, Lernen und Wachsen – mitten im Grünen.</p>
+    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1050&q=80" alt="Kinder spielen im Garten" class="rounded-xl shadow-lg mx-auto w-full max-w-2xl animate-fadeIn">
+  </section>
+
+  <section id="about" class="py-16 max-w-4xl mx-auto px-6 animate-slideUp">
+    <h3 class="text-2xl font-bold mb-4">Über uns 🐻</h3>
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <p class="animate-fadeIn">Der Kindergarten WolfGarten liegt idyllisch am Waldrand und bietet Kindern im Alter von 2 bis 6 Jahren eine naturnahe Umgebung mit viel Platz zum Entdecken und Entfalten. Wir fördern Kreativität, soziales Miteinander und Selbstständigkeit durch spielerisches Lernen und liebevolle Betreuung.</p>
+      <img src="https://images.unsplash.com/photo-1589396571788-dfdc336a9dc2?auto=format&fit=crop&w=800&q=80" alt="Kindergarten Gebäude" class="rounded-lg shadow animate-zoomIn">
+    </div>
+  </section>
+
+  <section id="angebote" class="py-16 bg-white max-w-4xl mx-auto px-6 animate-fadeIn">
+    <h3 class="text-2xl font-bold mb-4">Unsere Angebote 🐰</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <ul class="list-disc list-inside space-y-2 animate-slideUp">
+        <li>Ganztagsbetreuung mit gesunder Vollverpflegung</li>
+        <li>Waldtage & Naturpädagogik</li>
+        <li>Musikalische Frühförderung</li>
+        <li>Kreativwerkstatt & Bastelstunden</li>
+        <li>Vorschulprogramm zur Vorbereitung auf die Schule</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1580986601262-927f3e37b67e?auto=format&fit=crop&w=800&q=80" alt="Kinder beim Basteln" class="rounded-lg shadow animate-zoomIn">
+    </div>
+  </section>
+
+  <section id="team" class="py-16 max-w-4xl mx-auto px-6 animate-slideUp">
+    <h3 class="text-2xl font-bold mb-4">Unser Team 🦉</h3>
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <p class="animate-fadeIn">Unser engagiertes Team besteht aus staatlich anerkannten Erzieherinnen, pädagogischen Fachkräften und einer Köchin, die täglich frisch und kindgerecht kocht. Wir arbeiten Hand in Hand, um jedem Kind Geborgenheit und individuelle Förderung zu bieten.</p>
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="Unser Team" class="rounded-lg shadow animate-zoomIn">
+    </div>
+  </section>
+
+  <section id="kontakt" class="py-16 bg-green-100 max-w-4xl mx-auto px-6 animate-fadeIn">
+    <h3 class="text-2xl font-bold mb-4">Kontakt 🐦</h3>
+    <p class="mb-2">Kindergarten WolfGarten<br>Am Waldrand 5<br>12345 Musterstadt</p>
+    <p class="mb-2">Telefon: 01234 / 567890</p>
+    <p class="mb-2">E-Mail: info@wolfgarten-kindergarten.de</p>
+    <div class="mt-6 animate-zoomIn">
+      <iframe class="w-full h-64 rounded-lg shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.812013457457!2d13.405838915807347!3d52.520006079812095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c0a10f7b25%3A0xa8ebc0bbf8a217b7!2sBerlin!5e0!3m2!1sde!2sde!4v1618314335736!5m2!1sde!2sde" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer class="bg-nature-dark text-white text-center p-4 mt-10 animate-fadeIn">
+    <p>&copy; 2025 Kindergarten WolfGarten. Alle Rechte vorbehalten. 🦊</p>
+  </footer>
+</body>
+</html>
